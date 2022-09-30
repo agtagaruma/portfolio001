@@ -10,7 +10,15 @@
     position: absolute;
     height: 40px;
     background-color: #153d52;
-    animation: progress-animation 2s forwards;
-    
+      
+}
 
+#play-animation {
+    animation: progress-animation 2s forwards;
+}
+
+@keyframes progress-animation {
+    0% { width: 0%;}
+    25% {width: 25%;}
+    
 }
