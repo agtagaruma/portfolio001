@@ -3,9 +3,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>JS-Game | Be Brave</title>
+    <title>JS-Game | Reckon</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/logoCSS.css">
     <link rel="stylesheet" href="/css/bgstyle.css">
+    <link rel="stylesheet" href="/fonts/stylesheet.css">
+    <link rel="stylesheet" href="/progressBar/progressAreaCSS.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
@@ -13,21 +16,43 @@
 <body>
     <body>
         <div class="container">
-        
-        
+          
           <div class="content">
+            <div class="logo">
+              <h1 style="font-family: luckiest_guyregular;">Reckon</h1>
+            </div>
             <input type="text" class="typing-input" maxlength="1">
             <div class="inputs" style="font-size:40px;" type="text"/></div>
+            <div class="progressArea">
+              <div class="box">
+                <div class="chart" data-percent="90" ><img src="/icons/treasure.png" width="120px" height="120px"/></div>
+                <h2>TREASURE CHEST</h2>
+              </div>
+              <div class="box">
+                <div class="chart" data-percent="72" ><img src="/icons/bomb.png" width="120px" height="120px"/></div>
+                <h2>BOMB</h2>
+              </div>
+ 
+            </div>
             <div class="details">
               <p class="hint">Hint: <span></span></p>
               <p class="guess-left">Remaining guesses: <span></span></p>
               <p class="wrong-letter">Wrong letters: <span></span></p>
             </div>
-            <button class="reset-btn">Reset Game</button>
+            <button class="reset-btn" >Reset Game</button>
           </div>
+
+            
+          </div>
+
+
         
 
         
+
+
+
+
         <!-- Background Style -->
         <div>
           <div class="bg"></div>
@@ -42,6 +67,7 @@
     
         <script src="js/words.js"></script>
         <script src="js/script.js"></script>
+        <script src="/progressBar/chestProgressBar.js"></script>
 
 
         </div>
