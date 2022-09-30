@@ -1,4 +1,4 @@
-const inputs = document.querySelector(".inputs"),
+const letters = document.querySelector(".letters"),
 hintTag = document.querySelector(".hint span"),
 guessLeft = document.querySelector(".guess-left span"),
 wrongLetter = document.querySelector(".wrong-letter span"),
@@ -10,7 +10,7 @@ let word, maxGuesses, incorrectLetters = [], correctLetters = [];
 function randomWord() {
     let ranItem = wordList[Math.floor(Math.random() * wordList.length)];
     word = ranItem.word;
-    maxGuesses = word.length >= 5 ? 8 : 6;
+    maxGuesses = word.length >= 5 ? 10 : 6;
     correctLetters = []; incorrectLetters = [];
     hintTag.innerText = ranItem.hint;
     guessLeft.innerText = maxGuesses;
@@ -19,7 +19,7 @@ function randomWord() {
     let html = "";
     for (let i = 0; i < word.length; i++) {
         html += `<input type="text" disabled>`;
-        inputs.innerHTML = html;
+        letters.innerHTML = html;
     }
 }
 randomWord();
@@ -31,7 +31,7 @@ function initGame(e) {
             for (let i = 0; i < word.length; i++) {
                 if(word[i] == key) {
                     correctLetters += key;
-                    inputs.querySelectorAll("input")[i].value = key;
+                    letters.querySelectorAll("input")[i].value = key;
                 }
             }
         } else {
@@ -51,7 +51,7 @@ function initGame(e) {
         } else if(maxGuesses < 1) {
             alert("Game over! You don't have remaining guesses");
             for(let i = 0; i < word.length; i++) {
-                inputs.querySelectorAll("input")[i].value = word[i];
+                letters.querySelectorAll("input")[i].value = word[i];
             }
         }
     }, 100);
@@ -59,5 +59,5 @@ function initGame(e) {
 
 resetBtn.addEventListener("click", randomWord);
 typingInput.addEventListener("input", initGame);
-inputs.addEventListener("click", () => typingInput.focus());
+letters.addEventListener("click", () => typingInput.focus());
 document.addEventListener("keydown", () => typingInput.focus());

@@ -41,12 +41,12 @@ height: 70%px;
 .wrapper .content{
   margin: 25px 25px 35px;
 }
-.content .inputs{
+.content .letters{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.inputs input{
+.letters input{
   height: 100px;
   width: 100px;
   margin: 4px;
@@ -66,7 +66,7 @@ height: 70%px;
   position: absolute;
   pointer-events: none;
 }
-.inputs input:first-child{
+.letters input:first-child{
   margin-left: 0px;
 }
 .content .details{
@@ -77,17 +77,19 @@ height: 70%px;
   margin-bottom: 10px;
 }
 .content .reset-btn{
-  width: 100%;
+  width: 45%;
   border: none;
   cursor: pointer;
   color: #fff;
   outline: none;
-  padding: 15px 0;
+  padding: 20px 0;
   font-size: 60px;
   border-radius: 5px;
   background: #1BB295;
   transition: all 0.3s ease;
   font-family: luckiest_guyregular;
+  margin: 5px;
+
 }
 .content .reset-btn:hover{
   background: #18a589;
@@ -123,7 +125,7 @@ height: 70%px;
     margin: 25px 20px 35px;
     width: 800px;
   }
-  .inputs input{
+  .letters input{
     height: 100px;
     width: 100px;
     margin: 10px;
