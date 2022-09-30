@@ -1,0 +1,16 @@
+.bar-container{
+    height: 40px;
+    width: 100%;
+    background-color: #ffbf6b;
+    display: flex;
+    margin-top: 30px;
+}
+
+.bar-container .progress-bar {
+    position: absolute;
+    height: 40px;
+    background-color: #153d52;
+    animation: progress-animation 2s forwards;
+    
+
+}

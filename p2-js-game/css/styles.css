@@ -18,27 +18,24 @@ body{
   background: #1BB295;
 }
 .wrapper{
-  width: 430px;
-  height: 600px;
+  width: 300px;
+  height: 300px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 .wrapper h1{
-  font-size: 80px;
+  font-size: 30px;
   font-weight: 500;
   padding: 20px 25px;
   border-bottom: 1px solid #ccc;
-  top: 10px;
+  top: 5px;
   left: 20px;
   
 }
 .content {
-width: 1000px;
-height: 1000px;
-
-
-
+width: 60%;
+height: 70%px;
 }
 
 .wrapper .content{
@@ -53,7 +50,7 @@ height: 1000px;
   height: 100px;
   width: 100px;
   margin: 4px;
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 500;
   color: #1ba98c;
   text-align: center;
@@ -86,14 +83,32 @@ height: 1000px;
   color: #fff;
   outline: none;
   padding: 15px 0;
-  font-size: 40px;
+  font-size: 60px;
   border-radius: 5px;
   background: #1BB295;
   transition: all 0.3s ease;
+  font-family: luckiest_guyregular;
 }
 .content .reset-btn:hover{
   background: #18a589;
 }
+.container {
+  position: relative;
+  display: flex;
+  width: 60%;
+  height: 70%px;
+  background-color: white;
+  opacity: 75%;
+  align-items: center;
+  align-content: center;
+  
+
+}
+
+
+/* ============================================================Smaller media below================================================ */
+
+
 
 @media screen and (max-width: 460px) {
   .wrapper {
@@ -123,17 +138,16 @@ height: 1000px;
   }
 }
 
-/* Container */
-
 .container {
-    position: relative;
-    display: flex;
-    width: 80%;
-    height: 1200px;
-    background-color: white;
-    opacity: 75%;
-    align-items: center;
-    align-content: center;
-    
+  position: relative;
+  display: flex;
+  width: 60%;
+  height: 70%x;
+  background-color: white;
+  opacity: 75%;
+  align-items: center;
+  align-content: center;
+  
 
 }
+
