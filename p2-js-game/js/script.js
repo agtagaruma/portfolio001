@@ -24,6 +24,14 @@ function randomWord() {
 }
 randomWord();
 
+
+// Sound Effects
+
+const winningSound = new Audio('./sounds/correct.mp3');
+const lossingSound = new Audio('./sounds/wrong.mp3');
+
+
+
 function initGame(e) {
     let key = e.target.value.toLowerCase();
     if(key.match(/^[A-Za-z]+$/) && !incorrectLetters.includes(` ${key}`) && !correctLetters.includes(key)) {
@@ -45,14 +53,15 @@ function initGame(e) {
 
     setTimeout(() => {
         if(correctLetters.length === word.length) {
-            alert(`Congrats! You found the word ${word.toUpperCase()}`);
+            alert(`Congrats! You found the word ${word.toUpperCase()}  ${winningSound.play()}`);
             onclick="moveUP()";
             return randomWord();
         } else if(maxGuesses < 1) {
-            alert("Game over! You don't have remaining guesses");
+            alert('Sorry, Mali ka!');
             for(let i = 0; i < word.length; i++) {
                 letters.querySelectorAll("input")[i].value = word[i];
             }
+            
         }
     }, 100);
 }

@@ -29,8 +29,7 @@ body{
   font-weight: 500;
   padding: 20px 25px;
   border-bottom: 1px solid #ccc;
-  top: 5px;
-  left: 20px;
+  
   
 }
 .content {
@@ -78,12 +77,12 @@ height: 70%px;
 }
 
 .content .quit{
-  width: 45%;
+  width: 25%;
   border: none;
   cursor: pointer;
   color: #fff;
   outline: none;
-  padding: 20px 0;
+  padding: 10px 0;
   font-size: 60px;
   border-radius: 5px;
   background: #1BB295;
@@ -95,12 +94,12 @@ height: 70%px;
 
 
 .content .reset-btn{
-  width: 45%;
+  width: 25%;
   border: none;
   cursor: pointer;
   color: #fff;
   outline: none;
-  padding: 20px 0;
+  padding: 10px 0;
   font-size: 60px;
   border-radius: 5px;
   background: #1BB295;
@@ -115,7 +114,7 @@ height: 70%px;
 .container {
   position: relative;
   display: flex;
-  width: 60%;
+  width: 40%;
   height: 70%px;
   background-color: white;
   opacity: 75%;
@@ -125,6 +124,23 @@ height: 70%px;
 
 }
 
+.hint {
+  font-size: x-large;
+  font:bold;
+  font-weight: 800;
+}
+
+.guess-left {
+  font-size: smaller;
+  font-style: normal;
+}
+
+.note {
+  font-size: smaller;
+  font-weight: 500;
+  font-style: italic;
+  margin-top: 15px;
+}
 
 /* ============================================================Smaller media below================================================ */
 
@@ -161,7 +177,7 @@ height: 70%px;
 .container {
   position: relative;
   display: flex;
-  width: 60%;
+  width: 40%;
   height: 70%x;
   background-color: white;
   opacity: 75%;
