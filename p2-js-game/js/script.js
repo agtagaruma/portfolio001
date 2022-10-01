@@ -53,11 +53,11 @@ function initGame(e) {
 
     setTimeout(() => {
         if(correctLetters.length === word.length) {
-            alert(`Congrats! You found the word ${word.toUpperCase()}  ${winningSound.play()}`);
+            alert(`Yey! you got the right ${word.toUpperCase()}  ${winningSound.play()}`);
             onclick="moveUP()";
             return randomWord();
         } else if(maxGuesses < 1) {
-            alert('Sorry, Mali ka!');
+            alert(`Sorry, you ran out of tries! ${lossingSound.play()}`);
             for(let i = 0; i < word.length; i++) {
                 letters.querySelectorAll("input")[i].value = word[i];
             }
