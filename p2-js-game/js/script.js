@@ -1,5 +1,5 @@
 const letters = document.querySelector(".letters"),
-hintTag = document.querySelector(".hint span"),
+hints = document.querySelector(".hint span"),
 guessLeft = document.querySelector(".guess-left span"),
 wrongLetter = document.querySelector(".wrong-letter span"),
 resetBtn = document.querySelector(".reset-btn"),
@@ -12,7 +12,7 @@ function randomWord() {
     word = ranItem.word;
     maxGuesses = word.length >= 5 ? 10 : 6;
     correctLetters = []; incorrectLetters = [];
-    hintTag.innerText = ranItem.hint;
+    hints.innerText = ranItem.hint;
     guessLeft.innerText = maxGuesses;
     wrongLetter.innerText = incorrectLetters;
 

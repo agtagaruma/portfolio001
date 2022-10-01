@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="/css/logoCSS.css">
     <link rel="stylesheet" href="/css/bgstyle.css">
     <link rel="stylesheet" href="/fonts/stylesheet.css">
-    <link rel="stylesheet" href="/progressBar/style.css">
-    <link rel="stylesheet" href="/progressBar/chestProgressBar.css">
+    <link rel="stylesheet" href="/css/popUp.css"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
@@ -31,7 +30,10 @@
               <p class="wrong-letter">Wrong letters: <span></span></p>
             </div>
             <button class="reset-btn" >Reset</button>
-            <button class="reset-btn" >Quit</button>
+            <button class="quit" value="Close Tab." onclick="closeCurrentTab()">Quit</button>
+            
+            
+            
 
           </div>
 
@@ -56,11 +58,13 @@
 
        
 
-        
+        <!-- Java Scripts -->
     
         <script src="js/words.js"></script>
         <script src="js/script.js"></script>
         <script src="/progressBar/chestProgressBar.js"></script>
+        <script src="/js/quit.js"></script>
+        <script src="/js/enterKeyTrigger.js"></script>
 
 
         </div>
