@@ -1,19 +1,11 @@
 .pick {
     display: inline-block;
     position: relative;
-    text-align: center;
-    animation: wiggle 2s;
-    font-family: luckiest_guyregular;
-    font-size: xxx-large;
-    color: #153d52;
-    text-align: center;
-    animation: wiggle 2s;
-    animation-delay: 0ms;
+    animation: wiggle2 2s;
     animation-iteration-count: infinite;
-    text-align: center;
-    animation: wiggle 2s;
-    animation-delay: 0ms;
-    animation-iteration-count: infinite;
+    width: 60%;
+    height: 60%;
+    margin: 0%;
 }
 
 @keyframes wiggle {
@@ -43,26 +35,14 @@
 .guess {
     display: inline-block;
     position: relative;
-    text-align: center;
-    animation: wiggle 2s;
-    font-family: luckiest_guyregular;
-    font-size: xxx-large;
-    color: #153d52;
-    text-align: center;
     animation: wiggle2 2s;
     animation-delay: 0ms;
     animation-iteration-count: infinite;
-    text-align: center;
-    animation: wiggle2 2s;
-    animation-delay: 0ms;
-    animation-iteration-count: infinite;
-    width: 200%;
-    height: 200%;
+    width: 60%;
+    height: 60%;
     margin: 0%;
-    right: 50%;
-    top: -40px;
-
-
+    bottom: 70px;
+    right:  65px;
 }
 @keyframes wiggle2 {
     0% { transform:  translate(-5px, 1px) rotate(0deg);}
@@ -71,4 +51,17 @@
     65% { transform:  translate(-5px, 1px) rotate(0deg);}
     70% { transform:  translate(3px, 1px) rotate(-1deg);}
     85% { transform:  translate(-1px, -1px) rotate(7deg);}
-    100% { transform:  translate(2px, -2px) rotate(-1deg);}
+    100% { transform:  translate(2px, -10px) rotate(-1deg);}
+}
+
+
+/* ============================================================Smaller media below================================================ */
+
+
+
+@media screen and (max-width: 460px) {
+    .guess {
+      width: 50%;
+      height: 50%;
+
+    }

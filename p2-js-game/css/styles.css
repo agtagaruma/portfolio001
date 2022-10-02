@@ -57,7 +57,7 @@ height: 70%px;
   background: none;
   pointer-events: none;
   text-transform: uppercase;
-  border: 5px solid #B5B5B5;
+  border: 5px solid #ffbf6b;
 }
 
 .typing-input {
@@ -86,7 +86,7 @@ height: 70%px;
   padding: 10px 0;
   font-size: 60px;
   border-radius: 5px;
-  background: #1BB295;
+  background: #ffbf6b;
   transition: all 0.3s ease;
   font-family: luckiest_guyregular;
   margin: 5px;
@@ -103,13 +103,16 @@ height: 70%px;
   padding: 10px 0;
   font-size: 60px;
   border-radius: 5px;
-  background: #1BB295;
+  background: #ffbf6b;
   transition: all 0.3s ease;
   font-family: luckiest_guyregular;
   margin: 5px;
 
 }
 .content .reset-btn:hover{
+  background: #18a589;
+}
+.content .quit:hover{
   background: #18a589;
 }
 .container {
@@ -137,22 +140,13 @@ height: 70%px;
 }
 
 .note {
-  font-size: smaller;
-  font-weight: 500;
+  font-size: x-large;
+  font-weight: 700;
   font-style: italic;
   margin-top: 15px;
 }
 
-.container img {
-  width: 30%;
-  height: 30%;
 
-}
-
-.a {
- width: 20%;
- height: 20%;
-}
 
 /* ============================================================Smaller media below================================================ */
 
@@ -162,11 +156,7 @@ height: 70%px;
   .wrapper {
     width: 100%;
   }
-  .wrapper h1{
-    font-size: 22px;
-    padding: 16px 20px;
-    margin: 12px;
-  }
+  
   .wrapper .content{
     margin: 25px 20px 35px;
     width: 800px;
@@ -190,7 +180,7 @@ height: 70%px;
   position: relative;
   display: flex;
   width: 40%;
-  height: 70%x;
+  height: 70%;
   background-color: white;
   opacity: 100%;
   align-items: center;
