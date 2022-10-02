@@ -28,7 +28,7 @@ body{
   font-size: 30px;
   font-weight: 500;
   padding: 20px 25px;
-  border-bottom: 1px solid #ccc;
+  
   
   
 }
@@ -59,6 +59,7 @@ height: 70%px;
   text-transform: uppercase;
   border: 5px solid #B5B5B5;
 }
+
 .typing-input {
   opacity: 0;
   z-index: -999;
@@ -117,7 +118,7 @@ height: 70%px;
   width: 40%;
   height: 70%px;
   background-color: white;
-  opacity: 75%;
+  opacity: 100%;
   align-items: center;
   align-content: center;
   
@@ -142,6 +143,17 @@ height: 70%px;
   margin-top: 15px;
 }
 
+.container img {
+  width: 30%;
+  height: 30%;
+
+}
+
+.a {
+ width: 20%;
+ height: 20%;
+}
+
 /* ============================================================Smaller media below================================================ */
 
 
@@ -150,7 +162,7 @@ height: 70%px;
   .wrapper {
     width: 100%;
   }
-  .wrapper h2{
+  .wrapper h1{
     font-size: 22px;
     padding: 16px 20px;
     margin: 12px;
@@ -180,7 +192,7 @@ height: 70%px;
   width: 40%;
   height: 70%x;
   background-color: white;
-  opacity: 75%;
+  opacity: 100%;
   align-items: center;
   align-content: center;
   
