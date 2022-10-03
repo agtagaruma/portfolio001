@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -12,11 +13,6 @@ body{
   justify-content: center;
   background: #1BB295;
 }
-
-/* 4k *******************************************************************************************************************************************/
-
-@media screen and (min-width:2160px){
-
 
 .content {
   position: absolute;
@@ -41,54 +37,40 @@ body{
 }
 
 .wrapper{
-    width: 300px;
-    height: 300px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.content .letters{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+  
+.letters input{
+  height: 200px;
+  width: 200px;
+  margin: 4px;
+  font-size: 170px;
+  font-weight: 500;
+  color: #1ba98c;
+  text-align: center;
+  border-radius: 5px;
+  background: none;
+  pointer-events: none;
+  text-transform: uppercase;
+  border: 5px solid #ffbf6b;
   }
   
-  .wrapper h1{
-    font-size: 30px;
-    font-weight: 500;
-    padding: 20px 25px; 
+.typing-input {
+  opacity: 0;
+  z-index: -999;
+  position: absolute;
   }
   
-  .wrapper .content{
-    margin: 25px 25px 35px;
-  }
-  
-  .content .letters{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .letters input{
-    height: 200px;
-    width: 200px;
-    margin: 4px;
-    font-size: 170px;
-    font-weight: 500;
-    color: #1ba98c;
-    text-align: center;
-    border-radius: 5px;
-    background: none;
-    pointer-events: none;
-    text-transform: uppercase;
-    border: 5px solid #ffbf6b;
-  }
-  
-  .typing-input {
-    opacity: 0;
-    z-index: -999;
-    position: absolute;
-    pointer-events: none;
-  }
-  
-  .letters input:first-child{
-    margin-left: 0px;
-  }
   
   .content .details{
     margin: 40px 0 40px;
@@ -158,4 +140,3 @@ body{
     margin-top: 10px;
     color: black;
   }
-}
