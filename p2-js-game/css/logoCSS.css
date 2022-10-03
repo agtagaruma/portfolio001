@@ -1,48 +1,17 @@
-.pick {
-    display: inline-block;
-    position: relative;
-    animation: wiggle2 2s;
-    animation-iteration-count: infinite;
-    width: 60%;
-    height: 60%;
-    margin: 0%;
-}
-
-@keyframes wiggle {
-    0% { transform:  translate(1px, 1px) rotate(0deg);}
-    40% { transform:  translate(1px, -1px) rotate(1deg);}
-    50% { transform:  translate(-1px, 2px) rotate(-1deg);}
-    60% { transform:  translate(-3px, 1px) rotate(0deg);}
-    70% { transform:  translate(3px, 1px) rotate(-1deg);}
-    80% { transform:  translate(-1px, -1px) rotate(1deg);}
-    100% { transform:  translate(1px, -2px) rotate(-1deg);}
-    
-}
-
-/* @font-face {
-    font-family: 'luckiest_guyregular';
-    src: url('/fonts/luckiestguy-regular-webfont.woff2') format('woff2'),
-         url('/fonts/luckiestguy-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-} */
-
-
-
+/* 4k ******************************************************************************************************************************/
 
 /* guess logo animation */
+@media screen and (min-width:2160px){
 .guess {
     display: inline-block;
     position: relative;
     animation: wiggle2 2s;
-    animation-delay: 0ms;
     animation-iteration-count: infinite;
-    width: 60%;
-    height: 60%;
+    width: 50px;
+    height: 50px;
     margin: 0%;
-    bottom: 70px;
-    right:  65px;
+    right: 350px;
+    top: 150px;     
 }
 @keyframes wiggle2 {
     0% { transform:  translate(-5px, 1px) rotate(0deg);}
@@ -52,16 +21,82 @@
     70% { transform:  translate(3px, 1px) rotate(-1deg);}
     85% { transform:  translate(-1px, -1px) rotate(7deg);}
     100% { transform:  translate(2px, -10px) rotate(-1deg);}
+    }
+
+
+    /* pick-a animation */
+    .pick {
+        display: inline-block;
+        position: relative;
+        animation: wiggle 2s;
+        animation-iteration-count: infinite;
+        width: 200px;
+        height:200px%;
+        margin: 0%;
+        right: 450px;
+        top: -100px;
+    }
+        
+    @keyframes wiggle {
+        0% { transform:  translate(1px, 1px) rotate(0deg);}
+        40% { transform:  translate(1px, -1px) rotate(1deg);}
+        50% { transform:  translate(-1px, 2px) rotate(-1deg);}
+        60% { transform:  translate(-3px, 1px) rotate(0deg);}
+        70% { transform:  translate(3px, 1px) rotate(-1deg);}
+        80% { transform:  translate(-1px, -1px) rotate(1deg);}
+        100% { transform:  translate(1px, -2px) rotate(-1deg);}        
+    }
 }
 
+/* 1280px ******************************************************************************************************************************/
 
-/* ============================================================Smaller media below================================================ */
+/* guess logo animation */
+@media screen and (min-width:1280px) {
 
-
-
-@media screen and (max-width: 460px) {
-    .guess {
-      width: 50%;
-      height: 50%;
-
+    .logo {
+        width: auto;
+        height: auto;
     }
+    .guess {
+        display: inline-block;
+        position: relative;
+        animation: wiggle2 2s;
+        animation-iteration-count: infinite;
+        top: 140px;
+        left: -240px;
+
+
+            
+        }
+        @keyframes wiggle2 {
+            0% { transform:  translate(-5px, 1px) rotate(0deg);}
+            10% { transform:  translate(1px, -1px) rotate(-2deg);}
+            50% { transform:  translate(-1px, 7px) rotate(-1deg);}
+            65% { transform:  translate(-5px, 1px) rotate(0deg);}
+            70% { transform:  translate(3px, 1px) rotate(-1deg);}
+            85% { transform:  translate(-1px, -1px) rotate(7deg);}
+            100% { transform:  translate(2px, -10px) rotate(-1deg);}
+        }
+    
+    
+        /* pick-a animation */
+        .pick {
+            display: inline-block;
+            position: relative;
+            animation: wiggle 2s;
+            animation-iteration-count: infinite;
+            top: 10px;
+            left: -200px;
+        }
+            
+        @keyframes wiggle {
+            0% { transform:  translate(1px, 1px) rotate(0deg);}
+            40% { transform:  translate(1px, -1px) rotate(1deg);}
+            50% { transform:  translate(-1px, 2px) rotate(-1deg);}
+            60% { transform:  translate(-3px, 1px) rotate(0deg);}
+            70% { transform:  translate(3px, 1px) rotate(-1deg);}
+            80% { transform:  translate(-1px, -1px) rotate(1deg);}
+            100% { transform:  translate(1px, -2px) rotate(-1deg);}        
+        }
+    }
+
