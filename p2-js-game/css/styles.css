@@ -1,193 +1,22 @@
-/* Game panel CSS */
-
-/* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-
 body{
   display: flex;
-  padding: 10px;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
   background: #1BB295;
 }
 
-
-
-/* 1280px **************************************************************************************************************************************/
-
-@media screen and (min-width:1280px){
-.container {
-  position: absolute;
-  display: inline-block;
-  width: 70%;
-  height: 95%;
-  background-color: white;
-  opacity: 100%;
-  align-items: center;
-  align-content: center;
-}
-
-.content {
-  position: absolute;
-  display: inline-block;
-  align-items: center; 
-  justify-content: center;  
-  width: 70%;
-  height: 95%;
-
-
-}
-
-.inputSection{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #18a589;
-  width: 100%;
-  height: 1000px;
-  top: 20px;
-  flex-direction: column;
-  
-
-}
-
-.wrapper{
-    width: 300px;
-    height: 300px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  }
-  
-  .wrapper .content{
-    margin: 25px 25px 35px;
-  }
-  
-  .content .letters{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .letters input{
-    height: 60px;
-    width: 60px;
-    margin: 4px;
-    font-size: 20px;
-    font-weight: 500;
-    color: #1ba98c;
-    text-align: center;
-    border-radius: 5px;
-    background: none;
-    pointer-events: none;
-    text-transform: uppercase;
-    border: 5px solid #ffbf6b;
-  }
-  
-  .typing-input {
-    opacity: 0;
-    z-index: -999;
-    position: absolute;
-    pointer-events: none;
-  }
-  
-  .letters input:first-child{
-    margin-left: 0px;
-  }
-  
-  .content .details{
-    margin: 5px;
-  }
-  
-  .details p{
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .content .quit{
-    width:   350px;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-    padding: 10px 0;
-    font-size: 60px;
-    border-radius: 5px;
-    background: #ffbf6b;
-    transition: all 0.3s ease;
-    font-family: luckiest_guyregular;
-    margin: 5px;
-    display: inline-block ;
-  }
-  
-  .content .reset-btn{
-    width: 350px;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-    padding: 10px 0;
-    font-size: 60px;
-    border-radius: 5px;
-    background: #ffbf6b;
-    transition: all 0.3s ease;
-    font-family: luckiest_guyregular;
-    margin: 5px;
-    display: inline-block ;
-  }
-  
-  .content .reset-btn:hover{
-    background: #18a589;
-  }
-  
-  .content .quit:hover{
-    background: #18a589;
-  }
-
-  
-  .hint {
-    font-size: 50px;
-    font: bold;
-    font-weight: 800;
-  }
-  
-  .guess-left {
-    font-size: smaller;
-    font-style: normal;
-  }
-  
-  .note {
-    font-size: 20px;
-    font-weight: 400;
-    font-style: italic;
-    margin-top: 15px;
-    color: black;
-  }
-}
-
-
 /* 4k *******************************************************************************************************************************************/
 
 @media screen and (min-width:2160px){
-.container {
-  position: absolute;
-  display: inline-block;
-  width: 40%;
-  height: 95%;
-  background-color: white;
-  opacity: 100%;
-  align-items: center;
-  align-content: center;
-}
+
 
 .content {
   position: absolute;
@@ -196,8 +25,6 @@ body{
   justify-content: center;  
   width: 40%;
   height: 95%;
-
-
 }
 
 .inputSection{
@@ -205,10 +32,9 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #18a589;
   width: 100%;
   height: 1000px;
-  top: 240px;
+  top: 350px;
   flex-direction: column;
   
 
@@ -265,11 +91,11 @@ body{
   }
   
   .content .details{
-    margin: 20px 0 25px;
+    margin: 40px 0 40px;
   }
   
   .details p{
-    font-size: 95px;
+    font-size: 80px;
     margin-bottom: 10px;
   }
   
@@ -329,7 +155,7 @@ body{
     font-size: 50px;
     font-weight: 700;
     font-style: italic;
-    margin-top: 15px;
+    margin-top: 10px;
     color: black;
   }
 }
