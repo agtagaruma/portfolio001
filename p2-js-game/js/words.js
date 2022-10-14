@@ -1,4 +1,4 @@
-let wordList = [
+const wordList = [
     {
         word: "canada",
         hint: "🥫 + ➕ + 🅰️"  

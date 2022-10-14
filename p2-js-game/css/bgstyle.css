@@ -1,11 +1,4 @@
-/* Background Animation */
-html {
-  height:100%;
-}
 
-body {
-  margin:0;
-}
 
 .bg {
   animation:slide 3s ease-in-out infinite alternate;
