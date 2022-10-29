@@ -5,8 +5,9 @@ import { AiFillInstagram } from "react-icons/ai";
 export default function Footer() {
   return (
     <FooterContainer>
-      <span>Copyright &copy; 2021 Travelo. All rights reserved</span>
-      <ul className="links">
+      <span>Copyright &copy; 2021 viahero.com . All rights reserved</span>
+      {/* replace later */}
+      {/* <ul className="links">
         <li>
           <a href="#hero">Home</a>
         </li>
@@ -19,17 +20,32 @@ export default function Footer() {
         <li>
           <a href="#testimonials">Testimonials</a>
         </li>
-      </ul>
+      </ul> */}
       <ul className="social__links">
         <li>
-          <BsFacebook />
+          
+          <a href="https://www.facebook.com/agtagaruma" alt="fb">
+            <BsFacebook />
+          </a>
+
         </li>
+
         <li>
-          <AiFillInstagram />
+
+          <a href="https://www.facebook.com/agtagaruma" alt="fb">
+            <AiFillInstagram />
+          </a>
+
         </li>
+
         <li>
-          <BsLinkedin />
+
+          <a href="https://www.facebook.com/agtagaruma" alt="fb">
+            <BsLinkedin />
+          </a>
+          
         </li>
+        
       </ul>
     </FooterContainer>
   );
