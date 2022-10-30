@@ -57,17 +57,18 @@ export default function Recommend() {
   ];
 
   const packages = [
-    "The Weekend Break",
-    "The Package Holiday",
-    "The Group Tour",
-    "Long Term Slow Travel",
+    "HOTELS",
+    "FLIGHTS",
+    "ATTRACTIONS",
+    "EVENTS",
+    "VENUES"
   ];
 
   const [active, setActive] = useState(1);
   return (
     <Section id="recommend">
       <div className="title">
-        <h2>Recommended Destinations</h2>
+        <h2>Viajeros, Explore categories for exciting promos and finds!</h2>
       </div>
       <div className="packages">
         <ul>
@@ -119,6 +120,7 @@ const Section = styled.section`
     display: flex;
     justify-content: center;
     margin: 2rem 0;
+    font-weight: 900;
     ul {
       display: flex;
       list-style-type: none;

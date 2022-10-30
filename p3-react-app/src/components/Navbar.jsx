@@ -10,8 +10,8 @@ export default function Navbar() {
       <Nav>
         <div className="brand">
           <div className="container">
-            <img src={logo} alt="" height="30px" width="30px" />
-            VIAHERO.com
+            <img src={logo} alt="" height="30px" width="30px"/>
+            VIAHERO<p class="lowercase">.com</p>
           </div>
           <div className="toggle">
             {navbarState ? (
@@ -42,22 +42,22 @@ export default function Navbar() {
         <ul>
           <li>
             <a href="#home" onClick={() => setNavbarState(false)}>
-              Home
+              HOME
             </a>
           </li>
           <li>
             <a href="#services" onClick={() => setNavbarState(false)}>
-              About
+              ABOUT
             </a>
           </li>
           <li>
             <a href="#recommend" onClick={() => setNavbarState(false)}>
-              Places
+              PLACES
             </a>
           </li>
           <li>
             <a href="#testimonials" onClick={() => setNavbarState(false)}>
-              Testimonials
+              TESTI
             </a>
           </li>
         </ul>
@@ -80,6 +80,9 @@ const Nav = styled.nav`
       font-size: 1.2rem;
       font-weight: 900;
       text-transform: uppercase;
+    }
+    p.lowercase {
+      text-transform: lowercase;
     }
     .toggle {
       display: none;

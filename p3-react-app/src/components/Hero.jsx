@@ -9,11 +9,9 @@ export default function Hero() {
       </div>
       <div className="content">
         <div className="title">
-          <h1>TRAVEL TO EXPLORE</h1>
+          <h1>Be a HERO Viajeros!</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-            natus, enim ipsam magnam odit deserunt itaque? Minima earum velit
-            tenetur!
+          For every successful book you made, a new smile is drawn into our beneficiaries face. Reveneus from this site will benefit the less fortunate citizens accross the Philippines
           </p>
         </div>
         <div className="search">
