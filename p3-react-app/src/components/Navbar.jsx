@@ -33,7 +33,7 @@ export default function Navbar() {
             <a href="#recommend">PLACES</a>
           </li>
           <li>
-            <a href="#testimonials">TESTI</a>
+            <a href="#testimonials">ACCOMPLISHMENTS</a>
           </li>
         </ul>
         <button>SIGN IN / SIGN UP</button>
