@@ -12,7 +12,7 @@ export default function Services() {
       icon: service1,
       title: "TRAVEL FOR A CAUSE",
       subTitle:
-        "We can now light a brighter future to our less fortunate beneficiaries by simply visiting your favorite destination in the Philippines.",
+        "We can now light a brighter future to our less fortunate beneficiaries by simply visiting your favorite destinations in the Philippines.",
       },
     {
       icon: service2,

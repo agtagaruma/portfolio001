@@ -5,7 +5,7 @@ import { AiFillInstagram } from "react-icons/ai";
 export default function Footer() {
   return (
     <FooterContainer>
-      <span>Copyright &copy; 2021 viahero.com . All rights reserved</span>
+      <span>Copyright &copy; 2022 viahero.com . All rights reserved</span>
       {/* replace later */}
       {/* <ul className="links">
         <li>
