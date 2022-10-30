@@ -1,17 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import homeImage from "../assets/hero.png";
+import HeroImage from "../assets/hero2.png";
+
+
+
+
 export default function Hero() {
   return (
+  
     <Section id="hero">
       <div className="background">
-        <img src={homeImage} alt="" />
+        <img src={HeroImage} alt="" />
       </div>
       <div className="content">
         <div className="title">
           <h1>Be a HERO Viajeros!</h1>
           <p>
-          For every successful book you made, a new smile is drawn into our beneficiaries face. Reveneus from this site will benefit the less fortunate citizens accross the Philippines
+          For every successful book you made, a new smile is drawn into our beneficiaries face. Reveneus from this site will benefit the less fortunate citizens accross the Philippines.
           </p>
         </div>
         <div className="search">

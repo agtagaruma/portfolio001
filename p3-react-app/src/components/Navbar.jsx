@@ -57,7 +57,7 @@ export default function Navbar() {
           </li>
           <li>
             <a href="#testimonials" onClick={() => setNavbarState(false)}>
-              TESTI
+              ACCOMPLISHMENTS
             </a>
           </li>
         </ul>

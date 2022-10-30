@@ -10,58 +10,63 @@ import info1 from "../assets/info1.png";
 import info2 from "../assets/info2.png";
 import info3 from "../assets/info3.png";
 
+
+
 export default function Recommend() {
   const data = [
     {
       image: Destination1,
       title: "Siargao",
       subTitle: "Siargao, a teardrop-shaped small island located at the northeastern coast of Mindanao, is known as the country's Surfing Capital and is one of the best tourist ...",
-      cost: "38,800",
+      cost: "9,000",
       duration: "Approx 2 night trip",
+      
     },
     {
       image: Destination2,
       title: "Boracay",
       subTitle: "Escape to one of the best islands in the world, Boracay in the Philippines! Find out the best time to go, how to get there, the top things to do and see, where to eat, best hotels and resorts to stay in, and other travel tips with this ultimate travel guide. ",
-      cost: "54,200",
+      cost: "14,200",
       duration: "Approx 2 night trip",
+       
     },
     {
       image: Destination3,
       title: "Palawan",
       subTitle: "Palawan is a slice of heaven, a sliver of an island that teems with exotic wildlife, quaint fishing villages, and UNESCO World Heritage Sites. Wave hello to endangered animals at the Calauit Game Preserve and Wildlife Sanctuary.",
-      cost: "45,500",
+      cost: "15,500",
       duration: "Approx 2 night trip",
     },
     {
       image: Destination4,
       title: "Benguet",
       subTitle: "With picturesque mountain views, tranquil atmosphere, and cool breeze, Benguet provides a refreshing escape from the busy city life. Benguet is most known for being the home of Baguio City, a top tourist destination that is also called the Summer Capital of the Philippines.",
-      cost: "24,100",
+      cost: "9,100",
       duration: "Approx 1 night trip",
     },
     {
       image: Destination5,
       title: "Cebu",
       subTitle: "Cebu one of the most visited tourist destinations in the Philippines. Dubbed as the Queen City of the South, it boasts of many popular beaches, islands and diving spots. It is also rich in natural wonders such as waterfalls, mountains, and spectacular marine life.",
-      cost: "95,400",
+      cost: "15,400",
       duration: "Approx 2 night 2 day trip",
     },
     {
       image: Destination6,
       title: "Batanes",
       subTitle: "Batanes is famous for its breathtaking views of the vast rolling hills and the Pacific Ocean. It's also known for its kind and honest locals which are referred to by most travelers as the kindest locals in the Philippines.",
-      cost: "38,800",
+      cost: "18,800",
       duration: "Approx 3 night 2 day trip",
     },
   ];
 
   const packages = [
+    "PACKAGES",
     "HOTELS",
     "FLIGHTS",
     "ATTRACTIONS",
     "EVENTS",
-    "VENUES"
+    "VENUES",
   ];
 
   const [active, setActive] = useState(1);
@@ -102,6 +107,7 @@ export default function Recommend() {
               <div className="distance">
                 <span>1000 Kms</span>
                 <span>{destination.duration}</span>
+                
               </div>
             </div>
           );
