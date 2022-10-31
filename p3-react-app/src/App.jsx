@@ -1,14 +1,11 @@
 import React, { useEffect } from "react";
 import Footer from "./components/Footer";
-import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import Recommend from "./components/Recommend";
 import ScrollToTop from "./components/ScrollToTop";
-import Services from "./components/Services";
-import Testimonials from "./components/Testimonials";
 import scrollreveal from "scrollreveal";
-
-
+import {Routes, Route} from 'react-router-dom';
+import Homepage from './components/Homepage';
+import Booking from "./components/Booking";
 
 export default function App() {
   useEffect(() => {
@@ -37,10 +34,10 @@ export default function App() {
     <div>
       <ScrollToTop />
       <Navbar />
-      <Hero />
-      <Services />
-      <Recommend />
-      <Testimonials />
+      <Routes>
+        <Route path="/" element={<Homepage />}/>
+        <Route pat="/BookNow" element={<Booking />}/>
+      </Routes>
       <Footer />
     </div>
   );

@@ -111,18 +111,17 @@ const Nav = styled.nav`
     }
   }
   button {
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     cursor: pointer;
-    border-radius: 1rem;
+    border-radius: 0.3rem;
     border: none;
     color: white;
-    background-color: #48cae4;
+    background-color: #db0f16;
     font-size: 1.1rem;
-    letter-spacing: 0.1rem;
     text-transform: uppercase;
     transition: 0.3s ease-in-out;
     &:hover {
-      background-color: #023e8a;
+      background-color: #ff4468;
     }
   }
   @media screen and (min-width: 280px) and (max-width: 1080px) {
@@ -154,6 +153,7 @@ const ResponsiveNav = styled.div`
   width: 100%;
   align-items: center;
   transition: 0.3s ease-in-out;
+  
   ul {
     list-style-type: none;
     width: 100%;

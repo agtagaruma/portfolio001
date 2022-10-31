@@ -9,20 +9,34 @@ import Destination6 from "../assets/Destination6.png";
 import info1 from "../assets/info1.png";
 import info2 from "../assets/info2.png";
 import info3 from "../assets/info3.png";
+import { Navigate } from "react-router-dom";
+
+
 
 
 
 export default function Recommend() {
+  
+  const [bookNow, setBookNow ] = useState(false) 
+  if (bookNow) {
+    <Navigate to="/BookNow" />
+  }
+  
+
+
   const data = [
     {
+      id: 1,
       image: Destination1,
       title: "Siargao",
       subTitle: "Siargao, a teardrop-shaped small island located at the northeastern coast of Mindanao, is known as the country's Surfing Capital and is one of the best tourist ...",
       cost: "9,000",
       duration: "Approx 2 night trip",
       
+      
     },
     {
+      id:2,
       image: Destination2,
       title: "Boracay",
       subTitle: "Escape to one of the best islands in the world, Boracay in the Philippines! Find out the best time to go, how to get there, the top things to do and see, where to eat, best hotels and resorts to stay in, and other travel tips with this ultimate travel guide. ",
@@ -31,6 +45,7 @@ export default function Recommend() {
        
     },
     {
+      id:3,
       image: Destination3,
       title: "Palawan",
       subTitle: "Palawan is a slice of heaven, a sliver of an island that teems with exotic wildlife, quaint fishing villages, and UNESCO World Heritage Sites. Wave hello to endangered animals at the Calauit Game Preserve and Wildlife Sanctuary.",
@@ -38,6 +53,7 @@ export default function Recommend() {
       duration: "Approx 2 night trip",
     },
     {
+      id:4,
       image: Destination4,
       title: "Benguet",
       subTitle: "With picturesque mountain views, tranquil atmosphere, and cool breeze, Benguet provides a refreshing escape from the busy city life. Benguet is most known for being the home of Baguio City, a top tourist destination that is also called the Summer Capital of the Philippines.",
@@ -45,6 +61,7 @@ export default function Recommend() {
       duration: "Approx 1 night trip",
     },
     {
+      id:5,
       image: Destination5,
       title: "Cebu",
       subTitle: "Cebu one of the most visited tourist destinations in the Philippines. Dubbed as the Queen City of the South, it boasts of many popular beaches, islands and diving spots. It is also rich in natural wonders such as waterfalls, mountains, and spectacular marine life.",
@@ -52,6 +69,7 @@ export default function Recommend() {
       duration: "Approx 2 night 2 day trip",
     },
     {
+      id:6,
       image: Destination6,
       title: "Batanes",
       subTitle: "Batanes is famous for its breathtaking views of the vast rolling hills and the Pacific Ocean. It's also known for its kind and honest locals which are referred to by most travelers as the kindest locals in the Philippines.",
@@ -107,6 +125,7 @@ export default function Recommend() {
               <div className="distance">
                 <span>1000 Kms</span>
                 <span>{destination.duration}</span>
+                <button onClick= {() =>setBookNow(true)}>Book Now!</button>
                 
               </div>
             </div>

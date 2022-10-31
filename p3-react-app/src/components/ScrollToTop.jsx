@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import logo from "../assets/logo.png";
+import totop from "../assets/totop.png";
 export default function ScrollToTop() {
   const [scrollState, setScrollState] = useState(false);
   const toTop = () => {
@@ -11,7 +11,7 @@ export default function ScrollToTop() {
   });
   return (
     <ToTop onClick={toTop} scrollState={scrollState}>
-      <img src={logo} alt="" />
+      <img src={totop} alt="" />
     </ToTop>
   );
 }
@@ -24,9 +24,9 @@ const ToTop = styled.div`
   bottom: 1rem;
   right: 2rem;
   img {
-    height: 1.5rem;
+    height: 3rem;
   }
   border-radius: 2rem;
   background-color: #1900ff39;
-  padding: 1rem;
+  padding: .5rem;
 `;
