@@ -9,7 +9,7 @@ import Destination6 from "../assets/Destination6.png";
 import info1 from "../assets/info1.png";
 import info2 from "../assets/info2.png";
 import info3 from "../assets/info3.png";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -17,10 +17,12 @@ import { Navigate } from "react-router-dom";
 
 export default function Recommend() {
   
-  const [bookNow, setBookNow ] = useState(false) 
-  if (bookNow) {
-    <Navigate to="/BookNow" />
+  const navigate = useNavigate()
+  const bookNowFN = () => {
+    navigate('/BookNow', {replace: true}) 
+
   }
+  
   
 
 
@@ -125,7 +127,7 @@ export default function Recommend() {
               <div className="distance">
                 <span>1000 Kms</span>
                 <span>{destination.duration}</span>
-                <button onClick= {() =>setBookNow(true)}>Book Now!</button>
+                <button onClick= {bookNowFN}>Book Now!</button>
                 
               </div>
             </div>
@@ -202,6 +204,22 @@ const Section = styled.section`
       }
     }
   }
+
+  button {
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    border: none;
+    color: white;
+    background-color: #db0f16;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      background-color: #ff4468;
+    }
+
+    
   @media screen and (min-width: 280px) and (max-width: 768px) {
     .packages {
       ul {

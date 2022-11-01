@@ -7,6 +7,12 @@ import {Routes, Route} from 'react-router-dom';
 import Homepage from './components/Homepage';
 import Booking from "./components/Booking";
 
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter } from "react-router-dom";
+import Auth from "./components/Auth";
+
+
 export default function App() {
   useEffect(() => {
     const sr = scrollreveal({
@@ -36,7 +42,9 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />}/>
-        <Route pat="/BookNow" element={<Booking />}/>
+        <Route path="/BookNow" element={<Booking />}/>
+        <Route path="/auth" element={<Auth />} />
+      
       </Routes>
       <Footer />
     </div>

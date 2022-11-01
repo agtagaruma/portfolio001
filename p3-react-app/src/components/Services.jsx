@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import service1 from "../assets/service1.png";
 import service2 from "../assets/service2.png";

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { BsLinkedin, BsFacebook } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
+
 export default function Footer() {
   return (
     <FooterContainer>

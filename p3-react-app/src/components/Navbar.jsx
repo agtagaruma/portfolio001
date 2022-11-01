@@ -3,15 +3,28 @@ import styled from "styled-components";
 import logo from "../assets/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
+import { useNavigate } from "react-router-dom";
+
 export default function Navbar() {
+
+  const navigate = useNavigate()
+  const homePage = () => {
+    navigate('/', {replace: true}) 
+
+  }
+  const auth = () => {
+    navigate('/Auth', {replace: true}) 
+
+  }
+
   const [navbarState, setNavbarState] = useState(false);
   return (
     <>
       <Nav>
         <div className="brand">
-          <div className="container">
+          <div className="container" onClick= {homePage}>
             <img src={logo} alt="" height="30px" width="30px"/>
-            VIAHERO<p class="lowercase">.com</p>
+            VIAHERO.com
           </div>
           <div className="toggle">
             {navbarState ? (
@@ -36,7 +49,7 @@ export default function Navbar() {
             <a href="#testimonials">ACCOMPLISHMENTS</a>
           </li>
         </ul>
-        <button>SIGN IN / SIGN UP</button>
+        <button onClick= {auth}>SIGN IN / SIGN UP</button>
       </Nav>
       <ResponsiveNav state={navbarState}>
         <ul>
@@ -81,7 +94,7 @@ const Nav = styled.nav`
       font-weight: 900;
       text-transform: uppercase;
     }
-    p.lowercase {
+    p.dotcom {
       text-transform: lowercase;
     }
     .toggle {
