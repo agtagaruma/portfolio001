@@ -68,7 +68,7 @@ export default function Booking() {
               </form>
             </div>
             <div class="col-md-8 order-md-1">
-              <h4 class="mb-3">Billing address</h4>
+              <h4 class="mb-3">Billing</h4>
               <form class="needs-validation" novalidate>
                 <div class="row">
                   <div class="col-md-6 mb-3">
@@ -222,8 +222,16 @@ html {
     font-size: 16px;
   }
 }
+
+.maincontainer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container2 {
   max-width: 960px;
+  
 }
 .border-top { border-top: 1px solid #e5e5e5; }
 .border-bottom { border-bottom: 1px solid #e5e5e5; }

@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="title">
           <h1>Be a HERO Viajeros!</h1>
           <p>
-          For every successful book you made, a new smile is drawn into our beneficiaries face. Reveneus from this site will benefit the less fortunate citizens accross the Philippines.
+          Every successful book you make draws a new smile into our beneficiary's face. Revenues from this site will benefit the less fortunate citizens across the Philippines.
           </p>
         </div>
         <div className="search">

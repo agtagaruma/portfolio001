@@ -129,8 +129,10 @@ const Section = styled.section`
   }
   
   .Auth-form {
-    position: absolute;
-    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
     box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
     padding-top: 30px;
     padding-bottom: 20px;

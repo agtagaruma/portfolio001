@@ -126,7 +126,7 @@ export default function Recommend() {
               </div>
               <div className="distance">
                 <span>1000 Kms</span>
-                <span>{destination.duration}</span>
+                {/* <span>{destination.duration}</span> */}
                 <button onClick= {bookNowFN}>Book Now!</button>
                 
               </div>
@@ -219,7 +219,7 @@ const Section = styled.section`
       background-color: #ff4468;
     }
 
-    
+
   @media screen and (min-width: 280px) and (max-width: 768px) {
     .packages {
       ul {

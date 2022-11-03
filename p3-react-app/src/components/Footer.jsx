@@ -7,6 +7,7 @@ export default function Footer() {
   return (
     <FooterContainer>
       <span>Copyright &copy; 2022 viahero.com . All rights reserved</span>
+      <span>Terms and Conditions</span>
       {/* replace later */}
       {/* <ul className="links">
         <li>
