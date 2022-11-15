@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const AccommodationSchema = new mongoose.Schema({
+const FlightSchema = new mongoose.Schema({
     flight_name: String,
     flight_details: String,
     flight_departure: Date,
@@ -16,4 +16,4 @@ const AccommodationSchema = new mongoose.Schema({
     
 });
 
-module.exports = mongoose.model('Accommodation', AccommodationSchema);
+module.exports = mongoose.model('Flight', FlightSchema);
