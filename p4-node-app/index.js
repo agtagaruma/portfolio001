@@ -20,6 +20,7 @@ const AccommodationRouter = require('./routes/accommodations');
 const CheckoutRouter = require('./routes/checkouts');
 const FlightRouter = require('./routes/flights');
 const EventRouter = require('./routes/events');
+const PackageRouter = require('./routes/packages');
 
 
 // Database connection
@@ -36,6 +37,7 @@ server.use('/api/v1/accommodations', AccommodationRouter );
 server.use('/api/v1/checkouts', CheckoutRouter );
 server.use('/api/v1/flights', FlightRouter );
 server.use('/api/v1/events', EventRouter );
+server.use('/api/v1/packages', PackageRouter );
 
 server.listen(
     port, 
