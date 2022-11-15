@@ -19,24 +19,7 @@ router.get('/:id', ( request, response ) => {
     });
 });
 
-/* Get all posts of a specific user */
-router.get('/:id/posts', ( request, response ) => {
-    User.find(
-        { _id: request.params.id },
-        { 
-            posts: 1
-        })
-    .populate('posts')
-    .exec( (error, result) => {
-        console.log( result );
-        if( typeof result === 'object' ){
-            response.send( result );
-        }
-    });
-});
-
-
-// Update a post
+// Update a user
 router.put('/:id', ( request, response ) => {
     const userId = request.params.id;
     User.updateOne(
@@ -49,7 +32,7 @@ router.put('/:id', ( request, response ) => {
     });
 });
 
-// Delete a post
+// Delete a user
 router.delete('/:id', ( request, response ) => {
     User.deleteOne({ _id: request.params.id })
     .then( result => {

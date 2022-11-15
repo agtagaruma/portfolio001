@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const helmet = require('helmet');
 const server  = express();
-const port = 8080;
+const port = 8040;
 
 // Middlewares
 server.use( morgan('dev') );
@@ -16,21 +16,22 @@ server.use( helmet() );
 // Routes
 const UserRouter = require('./routes/users');
 const AuthRouter = require('./routes/auth');
-const CommmentRouter = require('./routes/comments');
-const PostRouter = require('./routes/posts');
+const AccommodationRouter = require('./routes/accommodations');
+const CheckoutRouter = require('./routes/checkouts');
+
 
 // Database connection
-mongoose.connect('mongodb://127.0.0.1:27017/upliftingdb');
+mongoose.connect('mongodb://127.0.0.1:27017/viaherodb');
 
 server.get('/', ( request, response ) => {
-    response.send(`Welcome to Uplifting API`);
+    response.send(`Welcome to Viahero API`);
 });
 
 // Routes
 server.use('/api/v1/auth', AuthRouter );
 server.use('/api/v1/users', UserRouter );
-server.use('/api/v1/posts', PostRouter );
-server.use('/api/v1/comments', CommmentRouter );
+server.use('/api/v1/accommodations', AccommodationRouter );
+// server.use('/api/v1/checkouts', CheckoutRouter );
 
 server.listen(
     port, 
@@ -38,12 +39,3 @@ server.listen(
         console.log(`Server running on port ${ port }`);
     }
 );
-
-/* 
-    TODO:
-    1. Create the models [DONE]
-    2. Routes
-    3. Test / Make adjustments
-    4. Make the collection
-
-*/

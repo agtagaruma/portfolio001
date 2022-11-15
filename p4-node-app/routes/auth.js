@@ -8,10 +8,10 @@ const User = require('../models/Users');
 const bcrypt = require('bcrypt');
 
 router.post('/register', async ( request, response ) => {
-    const hashedPassword = await bcrypt.hash( request.body.password, 10 );
+    const hashedPassword = await bcrypt.hash( request.body.user_password, 10 );
     const newUser = new User({
         ...request.body,
-        password: hashedPassword
+        user_password: hashedPassword
     });
 
     newUser.save().then( result => {
@@ -21,8 +21,8 @@ router.post('/register', async ( request, response ) => {
 });
 
 router.post('/login', ( request, response ) => {
-    User.findOne({ email: request.body.email }).then( result => {
-        bcrypt.compare( request.body.password, result.password, ( err, match ) => {
+    User.findOne({ user_email: request.body.user_email }).then( result => {
+        bcrypt.compare( request.body.user_password, result.user_password, ( err, match ) => {
             if( match ){
                 // Autheticated, valid email and password
                 response.send({ 

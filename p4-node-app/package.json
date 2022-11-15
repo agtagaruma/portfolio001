@@ -1,16 +1,12 @@
 {
-  "name": "uplifting",
+  "name": "p4-node-app",
   "version": "1.0.0",
-  "description": "A simple Express API for Uplifting App",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "express",
-    "api"
-  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
