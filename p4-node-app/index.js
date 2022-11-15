@@ -31,7 +31,7 @@ server.get('/', ( request, response ) => {
 server.use('/api/v1/auth', AuthRouter );
 server.use('/api/v1/users', UserRouter );
 server.use('/api/v1/accommodations', AccommodationRouter );
-// server.use('/api/v1/checkouts', CheckoutRouter );
+server.use('/api/v1/checkouts', CheckoutRouter );
 
 server.listen(
     port, 
