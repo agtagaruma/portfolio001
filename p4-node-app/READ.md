@@ -10,10 +10,10 @@ This is the backend project for my project 3 the viahero.com
 ![ERD](https://github.com/agtagaruma/temporaryImages/blob/main/ERD-PSD.jpg?raw=true)
 
 #### Unified Modeling Language (UML)
-![UML](/projects/p4-node-app/diagrams/UML-PSD%20copy.jpg "UML")
+![UML](https://github.com/agtagaruma/temporaryImages/blob/main/UML-PSD.jpg?raw=true)
 
 #### User Stories Diagram (USD)
-![USD](/projects/p4-node-app/diagrams/UserStoriesDiagram%20copy.jpg "USD")
+![USD](https://github.com/agtagaruma/temporaryImages/blob/main/UserStoriesDiagram.jpg?raw=true)
 
 #### Endpoints and Checklist can be found [HERE](./checklists/Ckecklists.xlsx)
 
