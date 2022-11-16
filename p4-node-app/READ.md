@@ -7,13 +7,13 @@ This is the backend project for my project 3 the viahero.com
 ## Database and API design
 
 #### Entity Relation Diagram (ERD)
-![alt text](/projects/p4-node-app/diagrams/ERD-PSD.jpg "ERD")
+![ERD](/projects/p4-node-app/diagrams/ERD-PSD.jpg "ERD")
 
 #### Unified Modeling Language (UML)
-![alt text](/projects/p4-node-app/diagrams/UML-PSD%20copy.jpg "UML")
+![UML](/projects/p4-node-app/diagrams/UML-PSD%20copy.jpg "UML")
 
 #### User Stories Diagram (USD)
-![alt text](/projects/p4-node-app/diagrams/UserStoriesDiagram%20copy.jpg "USD")
+![USD](/projects/p4-node-app/diagrams/UserStoriesDiagram%20copy.jpg "USD")
 
 #### Endpoints and Checklist can be found [HERE](./checklists/Ckecklists.xlsx)
 
