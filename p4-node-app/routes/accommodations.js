@@ -34,7 +34,7 @@ router.get('/', (request, response)=>{
 })
 
 
-// Update a accommodation
+// Update an accommodation
 router.put('/:id', ( request, response ) => {
     const accommodationId = request.params.id;
     Accommodation.updateOne(
@@ -47,7 +47,7 @@ router.put('/:id', ( request, response ) => {
     });
 });
 
-// Delete a accommodation
+// Delete an accommodation
 router.delete('/:id', ( request, response ) => {
     Accommodation.deleteOne({ _id: request.params.id })
     .then( result => {
