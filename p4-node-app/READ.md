@@ -7,7 +7,7 @@ This is the backend project for my project 3 the viahero.com
 ## Database and API design
 
 #### Entity Relation Diagram (ERD)
-![Entity Relation Diagram](/projects/p4-node-app/diagrams/ERD-PSD.jpg "ERD")
+![Entity Relation Diagram](/projects/p4-node-app/diagrams/ERD-PSD.jpg "ERD" height="200" width="auto")
 
 #### Unified Modeling Language (UML)
 ![UML](/projects/p4-node-app/diagrams/UML-PSD%20copy.jpg "UML")
