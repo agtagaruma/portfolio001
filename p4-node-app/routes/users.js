@@ -4,13 +4,25 @@ const router = express.Router();
 // Model
 const User = require('../models/Users');
 
+//get all user
+router.get('/', (request, response) => {
+    User.find()
+        .then(result => {
+            response.send(result)
+        })
+})
+
 /* Get a specific user */
 router.get('/:id', ( request, response ) => {
     User.findOne(
         { _id: request.params.id },
         { 
             password: 0
-        })
+        },
+    )
+    .populate("flight" )
+    .populate("accommodation")
+    .populate("event")
     .then( (result) => {
         console.log( result );
         if( typeof result === 'object' ){
@@ -43,6 +55,20 @@ router.delete('/:id', ( request, response ) => {
         }
     });
 });
+
+
+//display accomdation of a user
+// router.get('/:id/show-accommodation', ( request, response ) => {
+//     User.findOne(
+//         { _id: request.params.id })
+//     .populate('accommodation')
+//     .then( (result) => {
+//         console.log( result );
+//         if( typeof result === 'object' ){
+//             response.send( result );
+//         }
+//     });
+// });
 
 
 module.exports = router;

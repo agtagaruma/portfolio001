@@ -6,7 +6,6 @@ const Flight = require('../models/Flights');
 
 // BCrypt
 const bcrypt = require('bcrypt');
-const { response } = require('express');
 
 //Add/Create Accommodation
 router.post('/', (request, response) =>  {
