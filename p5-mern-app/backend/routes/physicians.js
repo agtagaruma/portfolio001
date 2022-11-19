@@ -2,9 +2,20 @@ const express = require('express');
 const router = express.Router();
 
 // Model
-const User = require('../models/Physicians');
+const Physician = require('../models/Physicians');
 
-//get all user
+// Creat new physicians
+router.post('/', (request, response) =>  {
+    let newPhysician = new Physician (request.body);
+    newPhysician.save().then(result =>{
+        response.send({status: "New Physician created"})
+    })
+})
+
+
+
+
+//get all physicians
 router.get('/', (request, response) => {
     Physician.find()
         .then(result => {
@@ -12,9 +23,9 @@ router.get('/', (request, response) => {
         })
 })
 
-/* Get a specific user */
+/* Get a specific physician */
 router.get('/:id', ( request, response ) => {
-    User.findOne(
+    Physician.findOne(
         { _id: request.params.id },
         { 
             password: 0
@@ -28,10 +39,10 @@ router.get('/:id', ( request, response ) => {
     });
 });
 
-// Update a user
+// Update a physician
 router.put('/:id', ( request, response ) => {
     const PhysicianId = request.params.id;
-    User.updateOne(
+    Physician.updateOne(
         { _id: PhysicianId }, 
         { $set: { ...request.body } })
     .then( result => {
@@ -41,7 +52,7 @@ router.put('/:id', ( request, response ) => {
     });
 });
 
-// Delete a user
+// Delete a physician
 router.delete('/:id', ( request, response ) => {
     Physician.deleteOne({ _id: request.params.id })
     .then( result => {
@@ -52,20 +63,6 @@ router.delete('/:id', ( request, response ) => {
         }
     });
 });
-
-
-//display accomdation of a user
-// router.get('/:id/show-accommodation', ( request, response ) => {
-//     User.findOne(
-//         { _id: request.params.id })
-//     .populate('accommodation')
-//     .then( (result) => {
-//         console.log( result );
-//         if( typeof result === 'object' ){
-//             response.send( result );
-//         }
-//     });
-// });
 
 
 module.exports = router;

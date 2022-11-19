@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 // Model
-const User = require('../models/Physicians');
+const Physician = require('../models/Physicians');
 
 // BCrypt
 const bcrypt = require('bcrypt');
@@ -14,14 +14,14 @@ router.post('/register', async ( request, response ) => {
         password: hashedPassword
     });
 
-    newUser.save().then( result => {
+    newPhysician.save().then( result => {
         response.send({ status: "Physician has been created" });
     })
 
 });
 
 router.post('/login', ( request, response ) => {
-    User.findOne({ email: request.body.email }).then( result => {
+    Physician.findOne({ email: request.body.email }).then( result => {
         bcrypt.compare( request.body.password, result.password, ( err, match ) => {
             if( match ){
                 // Autheticated, valid email and password

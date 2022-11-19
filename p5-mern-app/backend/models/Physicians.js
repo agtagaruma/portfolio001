@@ -7,10 +7,7 @@ const PhysicianSchema = new mongoose.Schema({
     contactNumber: String,
     clinicAffiliation: String,
     prcLicense: String,
-    prcScan: String,
-    // flight: [{type: mongoose.Schema.Types.ObjectId, ref: 'Flight'}],
-    // accommodation: [{type: mongoose.Schema.Types.ObjectId, ref: 'Accommodation'}],
-    // event: [{type: mongoose.Schema.Types.ObjectId, ref: 'Event'}]
+    prcScan: String
 
 });
 
