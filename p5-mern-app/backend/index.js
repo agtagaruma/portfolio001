@@ -16,9 +16,9 @@ server.use( helmet() );
 // Routes
 const PhysicianRouter = require('./routes/physicians');
 const AuthRouter = require('./routes/auth');
-// const AccommodationRouter = require('./routes/accommodations');
-// const CheckoutRouter = require('./routes/checkouts');
-// const FlightRouter = require('./routes/flights');
+const PatientRouter = require('./routes/patients');
+const AdmissionRouter = require('./routes/admissions');
+const PrescriptionRouter = require('./routes/prescriptions');
 // const EventRouter = require('./routes/events');
 // const PackageRouter = require('./routes/packages');
 
@@ -33,9 +33,9 @@ server.get('/', ( request, response ) => {
 // Routes
 server.use('/api/v1/auth', AuthRouter );
 server.use('/api/v1/physicians', PhysicianRouter );
-// server.use('/api/v1/accommodations', AccommodationRouter );
-// server.use('/api/v1/checkouts', CheckoutRouter );
-// server.use('/api/v1/flights', FlightRouter );
+server.use('/api/v1/patients', PatientRouter );
+server.use('/api/v1/admissions', AdmissionRouter );
+server.use('/api/v1/prescriptions', PrescriptionRouter );
 // server.use('/api/v1/events', EventRouter );
 // server.use('/api/v1/packages', PackageRouter );
 
