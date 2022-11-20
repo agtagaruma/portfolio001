@@ -4,7 +4,7 @@ const router = express.Router();
 // Model
 const Prescription = require('../models/Prescriptions');
 
-// Create new Prescription
+// Create new Prescription (POST)
 router.post('/', (request, response) =>  {
     let newPrescription = new Prescription (request.body);
     newPrescription.save().then(result =>{
@@ -12,7 +12,7 @@ router.post('/', (request, response) =>  {
     })
 })
 
-/* Get a specific Prescription */
+/* Get a specific Prescription (GET) */
 router.get('/:id', ( request, response ) => {
     Prescription.findOne(
         { _id: request.params.id },
@@ -27,15 +27,15 @@ router.get('/:id', ( request, response ) => {
     });
 });
 
-/* Get all prescriptions of a specific Prescription */
+/* Get all prescriptions of a specific Prescription (GET) */
 router.get('/:id/prescriptions', ( request, response ) => {
     Prescription.find(
         { _id: request.params.id },
         { 
             prescriptions: 1
         })
-    .populate('patients')
-    .populate('physicians')
+    .populate('patientsProfile')
+    .populate('physiciansInfo')
     .exec( (error, result) => {
         console.log( result );
         if( typeof result === 'object' ){
@@ -45,7 +45,7 @@ router.get('/:id/prescriptions', ( request, response ) => {
 });
 
 
-// Update a Prescription
+// Update a Prescription (PUT)
 router.put('/:id', ( request, response ) => {
     const PrescriptionId = request.params.id;
     Prescription.updateOne(
@@ -58,7 +58,7 @@ router.put('/:id', ( request, response ) => {
     });
 });
 
-// Delete a user
+// Delete a user (DELETE)
 router.delete('/:id', ( request, response ) => {
     Prescription.deleteOne({ _id: request.params.id })
     .then( result => {

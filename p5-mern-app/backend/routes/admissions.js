@@ -4,7 +4,7 @@ const router = express.Router();
 // Model
 const Admission = require('../models/Admissions');
 
-// Create new Admission
+// Create new Admission (POST)
 router.post('/', (request, response) =>  {
     let newAdmission = new Admission (request.body);
     newAdmission.save().then(result =>{
@@ -15,7 +15,7 @@ router.post('/', (request, response) =>  {
 
 
 
-//get all Admissions
+//get all Admissions (READ)
 router.get('/', (request, response) => {
     Admission.find()
         .then(result => {
@@ -23,7 +23,7 @@ router.get('/', (request, response) => {
         })
 })
 
-/* Get a specific Admission */
+/* Get a specific Admission (READ)*/
 router.get('/:id', ( request, response ) => {
     Admission.findOne(
         { _id: request.params.id },
@@ -39,7 +39,7 @@ router.get('/:id', ( request, response ) => {
     });
 });
 
-// Update a Patient
+// Update an Admission (PUT)
 router.put('/:id', ( request, response ) => {
     const AdmissionId = request.params.id;
     Admission.updateOne(
@@ -52,7 +52,7 @@ router.put('/:id', ( request, response ) => {
     });
 });
 
-// Delete a Admission
+// Delete a Admission (DELETE)
 router.delete('/:id', ( request, response ) => {
     Admission.deleteOne({ _id: request.params.id })
     .then( result => {

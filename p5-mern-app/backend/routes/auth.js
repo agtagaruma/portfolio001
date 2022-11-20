@@ -7,6 +7,7 @@ const Physician = require('../models/Physicians');
 // BCrypt
 const bcrypt = require('bcrypt');
 
+// Create user (POST)
 router.post('/register', async ( request, response ) => {
     const hashedPassword = await bcrypt.hash( request.body.password, 10 );
     const newPhysician = new Physician({
@@ -20,6 +21,7 @@ router.post('/register', async ( request, response ) => {
 
 });
 
+// Login (POST)
 router.post('/login', ( request, response ) => {
     Physician.findOne({ email: request.body.email }).then( result => {
         bcrypt.compare( request.body.password, result.password, ( err, match ) => {

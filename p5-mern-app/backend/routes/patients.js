@@ -4,7 +4,7 @@ const router = express.Router();
 // Model
 const Patient = require('../models/Patients');
 
-// Create new Patient
+// Create new Patient  (POST)
 router.post('/', (request, response) =>  {
     let newPatient = new Patient (request.body);
     newPatient.save().then(result =>{
@@ -12,10 +12,7 @@ router.post('/', (request, response) =>  {
     })
 })
 
-
-
-
-//get all Patients
+//get all Patients (GET)
 router.get('/', (request, response) => {
     Patient.find()
         .then(result => {
@@ -23,7 +20,7 @@ router.get('/', (request, response) => {
         })
 })
 
-/* Get a specific Patient */
+/* Get a specific Patient (GET)*/
 router.get('/:id', ( request, response ) => {
     Physician.findOne(
         { _id: request.params.id },
@@ -39,7 +36,7 @@ router.get('/:id', ( request, response ) => {
     });
 });
 
-// Update a Patient
+// Update a Patient (PUT)
 router.put('/:id', ( request, response ) => {
     const PatientId = request.params.id;
     Patient.updateOne(
@@ -52,7 +49,7 @@ router.put('/:id', ( request, response ) => {
     });
 });
 
-// Delete a Patient
+// Delete a Patient (DELETE)
 router.delete('/:id', ( request, response ) => {
     Patient.deleteOne({ _id: request.params.id })
     .then( result => {
