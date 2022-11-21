@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const PrescriptionSchema = new mongoose.Schema({
+    date: "Date",
     patientsProfile: [{type: mongoose.Schema.Types.ObjectId, ref: 'Patient'}],
     genericName: String,
     brandName: String,
