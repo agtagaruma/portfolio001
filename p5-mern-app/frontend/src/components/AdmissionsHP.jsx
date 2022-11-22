@@ -4,9 +4,51 @@ import React from 'react';
 //bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
+import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
+import {useDispatch} from 'react-redux'
 
 export default function AdmissionsHP() {
+
+  const dispatch = useDispatch()
+
+    //states
+    const [firstName ,setFirstName] = useState('')
+    const [lastName ,setLastName] = useState('')
+    const [contactNumber ,setContactNumber] = useState('')
+    const [gender ,setGender] = useState('')
+    const [birthdate ,setBirthdate] = useState('')
+    const [address ,setAddress] = useState('')
+    const [vitalSigns ,setVitalSigns] = useState('')
+  
+    const onFirstNameHandler = (event) => {
+      setFirstName(event.target.value)
+    }
+  
+    const onLastNameHandler = (event) => {
+      setLastName(event.target.value)
+    }
+  
+    const onContactNumberHandler = (event) => {
+      setContactNumber(event.target.value)
+    }
+  
+    const onGenderHandler = (event) => {
+      setGender(event.target.value)
+    }
+  
+    const onBirthdate = (event) => {
+      setBirthdate(event.target.value)
+    }
+  
+    const onAddressHandler = (event) => {
+      setAddress(event.target.value)
+    }
+  
+    const onVitalSignsHandler = (event) => {
+      setVitalSigns(event.target.value)
+    }
+
   return (
     <div>
     <Section id="AdmissionHP">

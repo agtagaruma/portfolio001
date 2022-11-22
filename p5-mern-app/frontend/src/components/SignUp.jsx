@@ -3,74 +3,183 @@ import styled from "styled-components";
 import homeImage from "../assets/hero.png";
 
 import { useNavigate } from "react-router-dom";
-import {useState} from 'react';
+import { useState } from 'react';
+import {useDispatch} from 'react-redux'
 
 export default function Hero() {
 
   const navigate = useNavigate()
- 
+  const dispatch = useDispatch()
+  
+  //states
+  const [firstName ,setFirstName] = useState('')
+  const [lastName ,setLastName] = useState('')
+  const [email ,setEmail] = useState('')
+  const [contactNumber ,setContactNumber] = useState('')
+  const [clinicAffiliation ,setClinicAffiliation] = useState('')
+  const [prcLicense ,setPrcLicense] = useState('')
+  const [password ,setPassword] = useState('')
+
+  const onFirstNameHandler = (event) => {
+    setFirstName(event.target.value)
+  }
+
+  const onLastNameHandler = (event) => {
+    setLastName(event.target.value)
+  }
+
+  const onEmailHandler = (event) => {
+    setEmail(event.target.value)
+  }
+
+  const onContactNumberHandler = (event) => {
+    setContactNumber(event.target.value)
+  }
+
+  const onClinicAfilliationHandler = (event) => {
+    setClinicAffiliation(event.target.value)
+  }
+
+  const onPrcLicenseHandler = (event) => {
+    setPrcLicense(event.target.value)
+  }
+
+  const onPasswordHandler = (event) => {
+    setPassword(event.target.value)
+  }
+
+  const onSubmitForm = (event) => {
+    event.preventDefault();
+    dispatch({
+      type : 'ADD_PHYSICIAN',
+      payload: {
+        firstName: firstName,
+        lastName : lastName,
+        password: password,
+        email: email,
+        prcLicense: prcLicense,
+        clinicAffiliation: clinicAffiliation,
+        contactNumber: contactNumber
+      }
+    })
+
+    setFirstName('')
+    setLastName('')
+    setPassword('')
+    setEmail('')
+    setClinicAffiliation('')
+    setContactNumber('')
+    setPrcLicense('')
+  }
 
   return (
     <Section id="hero">
       <div className="background">
         <img src={homeImage} alt="" />
       </div>
-      <div className="content">
+
+      <div className="content" >
         <div className="title">
-        
-        <div className="loginDiv">
-        <h4>Sign Up</h4>
-                <div class="login-holder">
-                  
-                <div class="row">
-                  <div class="col-md-6 mb-3">
+
+          <div className="loginDiv">
+            <h4>Sign Up</h4>
+            <form class="login-holder" onSubmit={onSubmitForm}>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
                   <label for="firstName">First Name*</label>
-                  <input type="text" class="form-control" id="address" placeholder="First Name" required />
-                  </div>
-                  <div class="col-md-6 mb-3">
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    value={firstName} 
+                    placeholder="First Name" 
+                    onChange={onFirstNameHandler} 
+                    required 
+                  />
+
+                </div>
+                <div class="col-md-6 mb-3">
                   <label for="lastName">Last Name*</label>
-                  <input type="text" class="form-control" id="address" placeholder="Last Name" required />
-                  </div>      
-                  
-                  <div class="col-md-6 mb-3">
+                  <input 
+                  type="text" 
+                  class="form-control" 
+                  value={lastName}  
+                  placeholder="Last Name" 
+                  onChange={onLastNameHandler} 
+                  required 
+                  />
+                </div>
+
+                <div class="col-md-6 mb-3">
                   <label for="firstName">Email*</label>
-                  <input type="email" class="form-control" id="address" placeholder="john@gmail.com" required />
-                  </div>
-                  <div class="col-md-6 mb-3">
+                  <input 
+                    type="email" 
+                    class="form-control" 
+                    value={email}  
+                    placeholder="john@gmail.com"
+                    onChange={onEmailHandler} 
+                    required 
+                  />
+                </div>
+
+                <div class="col-md-6 mb-3">
                   <label for="lastName">Cellphone Number*</label>
-                  <input type="text" class="form-control" id="address" placeholder="09933615930" required />
-                  </div>      
-                  </div>
-                  <div class="mb-3">
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    value={contactNumber}  
+                    placeholder="09933615930" 
+                    onChange={onContactNumberHandler} 
+                    required 
+                    />
+                </div>
+
+                <div class="col-md-6 mb-3">
+                <label for="address">Clinic Afilliation*</label>
+                  <input 
+                  type="text" 
+                  class="form-control" 
+                  value={clinicAffiliation}  
+                  placeholder="Baguio General Hospital" 
+                  onChange={onClinicAfilliationHandler} 
+                  required 
+                  />
+                </div>
+
+                <div class="col-md-6 mb-3">
                   <label for="address">PRC License Number*</label>
-                  <input type="text" class="form-control" id="address" placeholder="XDFT145DTY" required />
-                  
-                  </div>
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    value={prcLicense}  
+                    placeholder="XDFT145DTY" 
+                    onChange={onPrcLicenseHandler} 
+                    required 
+                    />
+                </div>
 
-                  <div class="mb-3">
-                  <label for="address">Password*</label>
-                  <input type="password" class="form-control" id="address" placeholder="************" required />
-                  
-                  </div>
+              </div>
 
-                  <h6>(*Required)</h6>
-                 </div>
-                 </div>
+              <div class="mb-3">
+                <label for="address">Password*</label>
+                <input 
+                type="password" 
+                class="form-control" 
+                value={password}  
+                placeholder="************" 
+                onChange={onPasswordHandler} 
+                required />
 
-                <ul>
-                  
-                  <button>Create Acount</button>
+              </div>
 
-                  
-                  
               
-                  
-                  </ul>
-                
-          
 
+              <h6>(*Required)</h6>
+              <ul> <button type="submit">Create</button> </ul>
+            </form>
+          </div>
+          
         </div>
-        
       </div>
     </Section>
   );
@@ -78,7 +187,7 @@ export default function Hero() {
 
 const Section = styled.section`
   position: relative;
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 100%;
   height: 100%;  
 

@@ -7,8 +7,7 @@ const PhysicianSchema = new mongoose.Schema({
     contactNumber: String,
     clinicAffiliation: String,
     prcLicense: String,
-    prcScan: String
-
+    password: String
 });
 
 module.exports = mongoose.model('Physician', PhysicianSchema);

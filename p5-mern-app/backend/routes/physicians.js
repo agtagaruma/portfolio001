@@ -4,13 +4,13 @@ const router = express.Router();
 // Model
 const Physician = require('../models/Physicians');
 
-// Creat new physicians (POST)
-router.post('/', (request, response) =>  {
-    let newPhysician = new Physician (request.body);
-    newPhysician.save().then(result =>{
-        response.send({status: "New Physician created"})
-    })
-})
+// // Creat new physicians (POST)
+// router.post('/', (request, response) =>  {
+//     let newPhysician = new Physician (request.body);
+//     newPhysician.save().then(result =>{
+//         response.send({status: "New Physician created"})
+//     })
+// })
 
 //get all physicians (GET)
 router.get('/', (request, response) => {
