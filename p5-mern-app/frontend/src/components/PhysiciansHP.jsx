@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 
 //bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,6 +8,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default function PhysiciansHP() {
+
+  const navigate = useNavigate()
+  const homePage = () => {
+    navigate('/', {replace: true}) 
+
+  }
+
+  const pdfPrescription = () => {
+    navigate('/PDFPrescription', {replace: true}) 
+
+  }
+
   return (
     <div>
     <Section id="PhysiciansHP">
@@ -148,14 +161,13 @@ export default function PhysiciansHP() {
                   <input type="text" class="form-control" id="address2" placeholder="Upper Respiratory Tract Infection" />
                 </div>
               
-                <div class="row">
-                  <div class="col-md-6 mb-3">
-                  <button class="btn btn-primary btn-lg btn-block" type="button">Preview</button>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                  <button class="btn btn-primary btn-lg btn-block" type="button">Cancel</button>
-                  </div>
-                </div>
+                <ul>
+                  
+                  <button onClick={pdfPrescription} >Preview</button>
+
+                  <button onClick={homePage}>Cancel</button>
+                  
+                </ul>
               </form>
             </div>
           </div>
@@ -182,10 +194,46 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  ul {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    li {
+      a {
+        text-decoration: none;
+        color: #0077b6;
+        font-size: 1.2rem;
+        transition: 0.1s ease-in-out;
+        &:hover {
+          color: #023e8a;
+        }
+      }
+      &:first-of-type {
+        a {
+          color: #023e8a;
+          font-weight: 900;
+        }
+      }
+    }
 }
 
 .buttonBelow{
   gap: 1rem;
+}
+
+button {
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  border: none;
+  color: white;
+  background-color: #db0f16;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    background-color: #e76149;
+  }
 }
 
 .container2 {

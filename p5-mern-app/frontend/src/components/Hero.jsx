@@ -46,7 +46,7 @@ export default function Hero() {
           <h4>a safer way to deliver health</h4>
           <p>
           e-Prescribe is an innovative 
-          electronic prescribing system that helps physicians to deliver their prescription electonically. It is secured, and 
+          electronic prescribing system that helps physicians to deliver their prescription electronically. It is secured, and 
           convenient. Prescribers and pharmacists can be sure that they are giving patients the right medication.
           </p>
 

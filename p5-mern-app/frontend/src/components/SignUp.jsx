@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import homeImage from "../assets/hero.png";
 
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import {useDispatch} from 'react-redux'
 
 export default function Hero() {
 
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const dispatch = useDispatch()
   
   //states
@@ -87,7 +87,7 @@ export default function Hero() {
 
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <label for="firstName">First Name*</label>
+                  <label for="firstName">First Name</label>
                   <input 
                     type="text" 
                     class="form-control" 
@@ -99,7 +99,7 @@ export default function Hero() {
 
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label for="lastName">Last Name*</label>
+                  <label for="lastName">Last Name</label>
                   <input 
                   type="text" 
                   class="form-control" 
@@ -111,7 +111,7 @@ export default function Hero() {
                 </div>
 
                 <div class="col-md-6 mb-3">
-                  <label for="firstName">Email*</label>
+                  <label for="firstName">Email</label>
                   <input 
                     type="email" 
                     class="form-control" 
@@ -123,7 +123,7 @@ export default function Hero() {
                 </div>
 
                 <div class="col-md-6 mb-3">
-                  <label for="lastName">Cellphone Number*</label>
+                  <label for="lastName">Cellphone Number</label>
                   <input 
                     type="text" 
                     class="form-control" 
@@ -135,7 +135,7 @@ export default function Hero() {
                 </div>
 
                 <div class="col-md-6 mb-3">
-                <label for="address">Clinic Afilliation*</label>
+                <label for="address">Clinic Afilliation</label>
                   <input 
                   type="text" 
                   class="form-control" 
@@ -147,7 +147,7 @@ export default function Hero() {
                 </div>
 
                 <div class="col-md-6 mb-3">
-                  <label for="address">PRC License Number*</label>
+                  <label for="address">PRC License Number</label>
                   <input 
                     type="text" 
                     class="form-control" 
@@ -174,8 +174,8 @@ export default function Hero() {
 
               
 
-              <h6>(*Required)</h6>
-              <ul> <button type="submit">Create</button> </ul>
+              <h6>(All fields are required)</h6>
+              <ul> <button type="submit">Create Acount</button> </ul>
             </form>
           </div>
           
