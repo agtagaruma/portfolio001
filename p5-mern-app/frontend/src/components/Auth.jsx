@@ -1,166 +1,255 @@
+import React from "react";
 import styled from "styled-components";
-import React from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
+import homeImage from "../assets/hero.png";
+
+import { useNavigate } from "react-router-dom";
 import {useState} from 'react';
 
+export default function Hero() {
 
-
-
-  export default function (props) {
-    let [authMode, setAuthMode] = useState("signin")
-  
-    const changeAuthMode = () => {
-      setAuthMode(authMode === "signin" ? "signup" : "signin")
-    }
-  
-    if (authMode === "signin") {
-      return (
+  const navigate = useNavigate()
  
 
-        <div className="Auth-form-container">
-            <br/>
-          <form className="Auth-form">
-            <div className="Auth-form-content">
-              <h3 className="Auth-form-title">Sign In</h3>
-              <div className="text-center">
-                Not registered yet?{" "}
-                <span className="link-primary" onClick={changeAuthMode}>
-                  Sign Up
-                </span>
-              </div>
-              <div className="form-group mt-3">
-                <label>Email Address</label>
-                <input
-                  type="email"
-                  className="form-control mt-1"
-                  placeholder="Enter email"
-                />
-              </div>
-              <div className="form-group mt-3">
-                <label>Password</label>
-                <input
-                  type="password"
-                  className="form-control mt-1"
-                  placeholder="Enter password"
-                />
-              </div>
-              <div className="d-grid gap-2 mt-3">
-                <button type="submit" className="btn btn-primary">
-                  Submit
-                </button>
-              </div>
-              <p className="text-center mt-2">
-                Forgot <a href="#">password?</a>
-              </p>
-            </div>
-          </form>
-        </div>
-      )
-    }
-
-  
-    return (
-        
-      <div className="Auth-form-container">
-        <br/>
-        <form className="Auth-form">
-          <div className="Auth-form-content">
-            <h3 className="Auth-form-title">Sign In</h3>
-            <div className="text-center">
-              Already registered?{" "}
-              <span className="link-primary" onClick={changeAuthMode}>
-                Sign In
-              </span>
-            </div>
-            <div className="form-group mt-3">
-              <label>Email Address</label>
-              <input
-                type="email"
-                className="form-control mt-1"
-                placeholder="e.g Jane Doe"
-              />
-            </div>
-            <div className="form-group mt-3">
-              <label>Full Name</label>
-              <input
-                type="text"
-                className="form-control mt-1"
-                placeholder="e.g Juan dela cruz"
-              />
-            </div>
-            <div className="form-group mt-3">
-              <label>Password</label>
-              <input
-                type="password"
-                className="form-control mt-1"
-                placeholder="Password"
-              />
-            </div>
-            <div className="d-grid gap-2 mt-3">
-              <button type="submit" className="btn btn-primary">
-                Submit
-              </button>
-            </div>
-            <p className="text-center mt-2">
-              Forgot <a href="#">password?</a>
-            </p>
-          </div>
-        </form>
+  return (
+    <Section id="hero">
+      <div className="background">
+        <img src={homeImage} alt="" />
       </div>
-    )
-  }
-  
+      <div className="content">
+        <div className="title">
+        
+        <div className="loginDiv">
+        <h4>Login</h4>
+                <div class="login-holder">
+                <div class="mb-3">
+                  <label for="address">Email*</label>
+                  <input type="text" class="form-control" id="address" placeholder="john@gmail.com" required />
+                  
+                  </div>
 
+                  <div class="mb-3">
+                  <label for="address">Password*</label>
+                  <input type="password" class="form-control" id="address" placeholder="************" required />
+                  
+                  </div>
+                </div>
+        </div>
 
+                <ul>
+                  
+                  <button>Login</button>
+                  
+                  
+                  <button>Forgot Password</button>
+                  
+                  
+              
+                  
+                  </ul>
+                
+          
+
+        </div>
+        
+      </div>
+    </Section>
+  );
+}
 
 const Section = styled.section`
-.App {
-    background-color: white;
+  position: relative;
+  margin-top: 2rem;
+  width: 100%;
+  height: 100%;  
+
+  .loginDiv{
+    display: flex;
+    flex-direction: column;
+    justify-alignment: left;
   }
-  
-  .Auth-form-container {
+
+  .background {
+    height: 100%;
+    img {
+      width: 100%;
+      filter: brightness(100%);
+    }
+  }
+  .content {
+    height: 100%;
+    width: 100%;
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: auto;
-    
-  }
-  
-  .Auth-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    border-radius: 8px;
-    background-color: white;
-    
-  }
-  
-  .Auth-form-content {
-    padding-left: 12%;
-    padding-right: 12%;
-  }
-  
-  .Auth-form-title {
+    top: 0;
+    z-index: 3;
     text-align: center;
-    margin-bottom: 1em;
-    font-size: 24px;
-    color: rgb(34, 34, 34);
-    font-weight: 800;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    
+    
+    .title {
+      position: absolute;
+      width: 800px;
+      height: 600px;
+      display: flex;
+      flex-direction:column;
+      justify-content:flex-start;
+      text-align:left;
+      color: green;
+      left: 1100px;
+      top: 25px;
+
+      .mb-3 {
+        font-size: 2rem;
+      }
+
+      
+      
+      
+      
+      h1 {
+        font-size: 4.5rem;
+        font-weight: 550;
+        font-family: pacifico;
+        color: #136148;
+        letter-spacing: 0.2rem;
+      }
+      h3 {
+        font-size: 2.5rem;
+        font-weight: 550;
+        font-family: roboto;
+        color: #136148;
+        letter-spacing: 0.2rem;
+      }
+      h4 {
+        font-size: 2rem;
+        font-weight: 550;
+        font-family:roboto;
+        color: #136148;
+        letter-spacing: 0.2rem;
+        margin: 0px 0px 30px 0px;
+      }
+      p {
+        font-size: 2rem;
+        font-weight: 550;
+        font-family: arial;
+        color: #136148;
+      }
+      button {
+        padding: 1rem;
+        cursor: pointer;
+        border-radius: 1rem;
+        border: none;
+        color: white;
+        background-color: #38c2bc;
+        font-size: 1.2rem;
+        font-weight: 450;
+        text-transform: uppercase;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          background-color: #59744a;
+        }
+      
+      
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      list-style-type: none;
+      li {
+        a {
+          text-decoration: none;
+          color: #0077b6;
+          font-size: 1.2rem;
+          transition: 0.1s ease-in-out;
+          &:hover {
+            color: #023e8a;
+          }
+        }
+        &:first-of-type {
+          a {
+            color: #023e8a;
+            font-weight: 900;
+          }
+        }
+      }
+    }
+
+    .search {
+      display: flex;
+      background-color: #ffffffce;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 1.5rem;
+        label {
+          font-size: 1.1rem;
+          color: #03045e;
+        }
+        input {
+          background-color: transparent;
+          border: none;
+          text-align: center;
+          color: black;
+          &[type="date"] {
+            padding-left: 3rem;
+          }
+
+          &::placeholder {
+            color: black;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      
+      }
+    }
   }
-  
-  label {
-    font-size: 14px;
-    font-weight: 600;
-    color: rgb(34, 34, 34);
+  @media screen and (min-width: 280px) and (max-width: 980px) {
+    height: 25rem;
+    .background {
+      background-color: palegreen;
+      img {
+        height: 100%;
+      }
+    }
+    .content {
+      .title {
+        h1 {
+          font-size: 1rem;
+        }
+        p {
+          font-size: 0.8rem;
+          padding: 1vw;
+        }
+      }
+      .search {
+        flex-direction: column;
+        padding: 0.8rem;
+        gap: 0.8rem;
+        /* padding: 0; */
+        .container {
+          padding: 0 0.8rem;
+          input[type="date"] {
+            padding-left: 1rem;
+          }
+        }
+        button {
+          padding: 1rem;
+          font-size: 1rem;
+        }
+        /* display: none; */
+      }
+    }
   }
-
-
-
-
 `;

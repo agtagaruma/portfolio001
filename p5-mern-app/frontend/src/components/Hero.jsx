@@ -1,39 +1,78 @@
 import React from "react";
 import styled from "styled-components";
-import HeroImage from "../assets/hero2.png";
+import homeImage from "../assets/hero.png";
 
-
-
+import { useNavigate } from "react-router-dom";
+import {useState} from 'react';
 
 export default function Hero() {
-  return (
+
+  const navigate = useNavigate()
+  const prescribeNowFN = () => {
+    navigate('/PhysiciansHP', {replace: true}) 
+
+  };
+
   
+  const admitNowFN = () => {
+    navigate('/AdmissionsHP', {replace: true}) 
+
+  };
+
+  const pdfPrescriptionFN = () => {
+    navigate('/PDFPrescription', {replace: true}) 
+
+  };
+
+  const patienthistory = () => {
+    navigate('/PatientHistory', {replace: true}) 
+
+  };
+
+  const terms = () => {
+    navigate('/Terms', {replace: true}) 
+
+  };
+
+  return (
     <Section id="hero">
       <div className="background">
-        <img src={HeroImage} alt="" />
+        <img src={homeImage} alt="" />
       </div>
       <div className="content">
         <div className="title">
-          <h1>Be a HERO Viajeros!</h1>
+          <h3>Welcome to</h3>
+          <h1>e-Prescribe</h1>
+          <h4>a safer way to deliver health</h4>
           <p>
-          Every successful book you make draws a new smile into our beneficiary's face. Revenues from this site will benefit the less fortunate citizens across the Philippines.
+          e-Prescribe is an innovative 
+          electronic prescribing system that helps physicians to deliver their prescription electonically. It is secured, and 
+          convenient. Prescribers and pharmacists can be sure that they are giving patients the right medication.
           </p>
+
+
+        
+                  <ul>
+                  
+                  <button onClick= {prescribeNowFN}>Physicians Homepage</button>
+                  
+                  
+                  <button onClick= {admitNowFN}>Admissions Homepage</button>
+                  
+                  
+                  <button onClick= {pdfPrescriptionFN}>PDF Prescription</button>
+
+                  <button onClick= {patienthistory}>Patient History</button>
+
+                  <button onClick= {terms}>Terms & Conditions</button>                
+
+
+                  </ul>
+                
+          
+
         </div>
-        <div className="search">
-          <div className="container">
-            <label htmlFor="">Where you want to go</label>
-            <input type="text" placeholder="Search Your location" />
-          </div>
-          <div className="container">
-            <label htmlFor="">Check-in</label>
-            <input type="date" />
-          </div>
-          <div className="container">
-            <label htmlFor="">Check-out</label>
-            <input type="date" />
-          </div>
-          <button>Explore Now</button>
-        </div>
+        
       </div>
     </Section>
   );
@@ -43,13 +82,13 @@ const Section = styled.section`
   position: relative;
   margin-top: 2rem;
   width: 100%;
-  height: 100%;
+  height: 100%;  
 
   .background {
     height: 100%;
     img {
       width: 100%;
-      filter: brightness(60%);
+      filter: brightness(100%);
     }
   }
   .content {
@@ -60,23 +99,96 @@ const Section = styled.section`
     z-index: 3;
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    
+    
     .title {
-      color: white;
+      position: absolute;
+      width: 800px;
+      height: 600px;
+      display: flex;
+      flex-direction:column;
+      justify-content:left;
+      color: green;
+      left: 1000px;
+      top: 5px;
+
+      
+      
+      
+      
       h1 {
-        font-size: 3rem;
+        font-size: 4.5rem;
+        font-weight: 550;
+        font-family: pacifico;
+        color: #136148;
         letter-spacing: 0.2rem;
       }
+      h3 {
+        font-size: 2.5rem;
+        font-weight: 550;
+        font-family: pacifico;
+        color: #136148;
+        letter-spacing: 0.2rem;
+      }
+      h4 {
+        font-size: 2rem;
+        font-weight: 550;
+        font-family: pacifico;
+        color: #136148;
+        letter-spacing: 0.2rem;
+        margin: 0px 0px 30px 0px;
+      }
       p {
-        text-align: center;
-        padding: 0 30vw;
-        margin-top: 0.5rem;
-        font-size: 1.2rem;
+        font-size: 2rem;
+        font-weight: 550;
+        font-family: arial;
+        color: #136148;
+      }
+      button {
+        padding: 1rem;
+        cursor: pointer;
+        border-radius: 1rem;
+        border: none;
+        color: white;
+        background-color: #38c2bc;
+        font-size: 1rem;
+        font-weight: 450;
+        text-transform: uppercase;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          background-color: #59744a;
+        }
+      
+      
+    }
+
+    ul {
+      display: flex;
+      gap: 1rem;
+      list-style-type: none;
+      li {
+        a {
+          text-decoration: none;
+          color: #0077b6;
+          font-size: 1.2rem;
+          transition: 0.1s ease-in-out;
+          &:hover {
+            color: #023e8a;
+          }
+        }
+        &:first-of-type {
+          a {
+            color: #023e8a;
+            font-weight: 900;
+          }
+        }
       }
     }
+
     .search {
       display: flex;
       background-color: #ffffffce;
@@ -109,19 +221,7 @@ const Section = styled.section`
           }
         }
       }
-      button {
-        padding: 1rem;
-        cursor: pointer;
-        border-radius: 0.3rem;
-        border: none;
-        color: white;
-        background-color: #4361ee;
-        font-size: 1.1rem;
-        text-transform: uppercase;
-        transition: 0.3s ease-in-out;
-        &:hover {
-          background-color: #023e8a;
-        }
+      
       }
     }
   }

@@ -16,6 +16,10 @@ export default function Navbar() {
     navigate('/Auth', {replace: true}) 
 
   }
+  const signUp = () => {
+    navigate('/SignUp', {replace: true}) 
+
+  }
 
   const [navbarState, setNavbarState] = useState(false);
   return (
@@ -23,8 +27,7 @@ export default function Navbar() {
       <Nav>
         <div className="brand">
           <div className="container" onClick= {homePage}>
-            {/* <img src={logo} alt="" height="30px" width="30px"/> */}
-            e-Prescription
+            e-Prescribe
           </div>
           <div className="toggle">
             {navbarState ? (
@@ -34,47 +37,12 @@ export default function Navbar() {
             )}
           </div>
         </div>
-
         <ul>
-          <li>
-            <a href="#home">HOME</a>
-          </li>
-          <li>
-            <a href="#services">ABOUT</a>
-          </li>
-          <li>
-            <a href="#recommend">PLACES</a>
-          </li>
-          <li>
-            <a href="#testimonials">ACCOMPLISHMENTS</a>
-          </li>
+        <button onClick= {auth}>LOGIN</button>
+        <button onClick= {signUp}>SIGN UP</button>
         </ul>
-        <button onClick= {auth}>SIGN IN / SIGN UP</button>
       </Nav>
-      <ResponsiveNav state={navbarState}>
-        <ul>
-          <li>
-            <a href="#home" onClick={() => setNavbarState(false)}>
-              HOME
-            </a>
-          </li>
-          <li>
-            <a href="#services" onClick={() => setNavbarState(false)}>
-              ABOUT
-            </a>
-          </li>
-          <li>
-            <a href="#recommend" onClick={() => setNavbarState(false)}>
-              PLACES
-            </a>
-          </li>
-          <li>
-            <a href="#testimonials" onClick={() => setNavbarState(false)}>
-              ACCOMPLISHMENTS
-            </a>
-          </li>
-        </ul>
-      </ResponsiveNav>
+      
     </>
   );
 }
@@ -92,7 +60,8 @@ const Nav = styled.nav`
       font-size: 4rem;
       font-weight: 550;
       font-family: pacifico;
-      color: 136148;
+      color: #136148;
+      
 
     }
   
@@ -125,15 +94,15 @@ const Nav = styled.nav`
   button {
     padding: 1rem;
     cursor: pointer;
-    border-radius: 0.3rem;
+    border-radius: 1rem;
     border: none;
     color: white;
     background-color: #db0f16;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     transition: 0.3s ease-in-out;
     &:hover {
-      background-color: #ff4468;
+      background-color: #e76149;
     }
   }
   @media screen and (min-width: 280px) and (max-width: 1080px) {
