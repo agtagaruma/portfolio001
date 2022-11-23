@@ -102,6 +102,8 @@ export default function PDFPrescription() {
             </div>
             <div class="col-md-8 order-md-1">
               <h4 class="mb-3"><b>Patient's Informations</b></h4>
+              <h5>Prescription Code: DJKF125GFV1</h5>
+              <br/>
               <form class="needs-validation" novalidate>
                 <div class="row">
                   <div class="col-md-6 mb-3">
